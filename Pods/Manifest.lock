@@ -14,15 +14,18 @@ PODS:
     - OHHTTPStubs/Core
   - OHHTTPStubs/OHPathHelpers (4.5.0)
   - Specta (1.0.4)
+  - STTwitter (0.2.3)
 
 DEPENDENCIES:
   - Expecta
   - OHHTTPStubs
   - Specta
+  - STTwitter
 
 SPEC CHECKSUMS:
   Expecta: 9d1bff6c8b0eeee73a166a2ee898892478927a15
   OHHTTPStubs: e573e76dd8bcd7ee5fcc6c3d86251551f4261e0c
   Specta: 69bb134672aae190a1379ff91df07dad8dd1f869
+  STTwitter: 77386cb6f1807fbfc0e321b9233bdecc9786195d
 
 COCOAPODS: 0.39.0

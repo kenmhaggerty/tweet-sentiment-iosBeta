@@ -5,6 +5,8 @@
 
 target 'FIS-Tweets' do
 
+pod 'STTwitter'
+
 end
 
 target 'FIS-TweetsTests' do
