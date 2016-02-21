@@ -17,6 +17,7 @@
 		5BC307971BE7ECF00069EF81 /* FISTwitterAPIClientSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC307951BE7ECF00069EF81 /* FISTwitterAPIClientSpec.m */; };
 		6CC808CB2A215FB04931D36D /* libPods-FIS-TweetsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CFFC60FC0E91FD59573794BE /* libPods-FIS-TweetsTests.a */; };
 		6D208617F7EEE69711A29EC4 /* libPods-FIS-Tweets.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF36111B9A55F436293560F7 /* libPods-FIS-Tweets.a */; };
+		7D136A271C7A33C700279D15 /* FISPrivateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D136A261C7A33C700279D15 /* FISPrivateInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		5BC3078E1BE7ECA90069EF81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BC307941BE7ECF00069EF81 /* fakeJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fakeJSON.json; sourceTree = "<group>"; };
 		5BC307951BE7ECF00069EF81 /* FISTwitterAPIClientSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISTwitterAPIClientSpec.m; sourceTree = "<group>"; };
+		7D136A251C7A33C700279D15 /* FISPrivateInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISPrivateInfo.h; sourceTree = "<group>"; };
+		7D136A261C7A33C700279D15 /* FISPrivateInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISPrivateInfo.m; sourceTree = "<group>"; };
 		815E19A95BD2F9FB259ABED4 /* Pods-FIS-Tweets.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FIS-Tweets.release.xcconfig"; path = "Pods/Target Support Files/Pods-FIS-Tweets/Pods-FIS-Tweets.release.xcconfig"; sourceTree = "<group>"; };
 		AF36111B9A55F436293560F7 /* libPods-FIS-Tweets.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FIS-Tweets.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFFC60FC0E91FD59573794BE /* libPods-FIS-TweetsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FIS-TweetsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +122,8 @@
 				5BC307711BE7C3850069EF81 /* AppDelegate.m */,
 				5BC307731BE7C3850069EF81 /* ViewController.h */,
 				5BC307741BE7C3850069EF81 /* ViewController.m */,
+				7D136A251C7A33C700279D15 /* FISPrivateInfo.h */,
+				7D136A261C7A33C700279D15 /* FISPrivateInfo.m */,
 				5BC307761BE7C3850069EF81 /* Main.storyboard */,
 				5BC307791BE7C3850069EF81 /* Assets.xcassets */,
 				5BC3077B1BE7C3850069EF81 /* LaunchScreen.storyboard */,
@@ -346,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D136A271C7A33C700279D15 /* FISPrivateInfo.m in Sources */,
 				5BC307751BE7C3850069EF81 /* ViewController.m in Sources */,
 				5BC307721BE7C3850069EF81 /* AppDelegate.m in Sources */,
 				5BC3076F1BE7C3850069EF81 /* main.m in Sources */,
