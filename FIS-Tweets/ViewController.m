@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "FISTwitterAPIClient.h"
 
 @interface ViewController ()
 
@@ -17,7 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    NSURLQueryItem *query = [NSURLQueryItem queryItemWithName:TwitterSearchAPIKey_Content value:@"FlatironSchool"];
+    [FISTwitterAPIClient getTweetsWithQuery:@[query] completion:^(NSArray <NSDictionary *> *tweets) {
+        //
+    }];
 }
 
 
