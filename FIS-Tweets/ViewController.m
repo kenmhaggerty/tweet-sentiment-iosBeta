@@ -18,8 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSURLQueryItem *query = [NSURLQueryItem queryItemWithName:TwitterSearchAPIKey_Content value:@"FlatironSchool"];
-    [FISTwitterAPIClient getTweetsWithQuery:@[query] completion:^(NSArray <NSDictionary *> *tweets) {
+//    NSURLQueryItem *query = [NSURLQueryItem queryItemWithName:TwitterSearchAPIKey_Content value:@"FlatironSchool"];
+//    [FISTwitterAPIClient getTweetsWithQuery:@[query] completion:^(NSArray <NSDictionary *> *tweets) {
+//        //
+//    }];
+    
+    [FISTwitterAPIClient getTweetsWithQuery:@"FlatironSchool" completion:^(NSDictionary *metadata, NSArray *statuses) {
         //
     }];
 }
