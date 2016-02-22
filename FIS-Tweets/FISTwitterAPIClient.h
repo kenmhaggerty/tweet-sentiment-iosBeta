@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString *const TwitterAPIKeyText;
+
 @interface FISTwitterAPIClient : NSObject
-+ (void)getTweetsWithQuery:(NSString *)query completion:(void (^)(NSDictionary *metadata, NSArray *statuses))completionBlock;
++ (void)getTweetsWithQuery:(NSString *)query completion:(void (^)(NSDictionary *metadata, NSArray <NSDictionary *> *statuses))completionBlock;
 @end

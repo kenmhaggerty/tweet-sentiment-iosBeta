@@ -10,6 +10,8 @@
 #import "STTwitter.h"
 #import "FISPrivateInfo.h"
 
+NSString *const TwitterAPIKeyText = @"text";
+
 @interface FISTwitterAPIClient ()
 @property (nonatomic, strong) STTwitterAPI *twitter;
 @end
@@ -36,7 +38,7 @@
     return self;
 }
 
-+ (void)getTweetsWithQuery:(NSString *)query completion:(void (^)(NSDictionary *metadata, NSArray *statuses))completionBlock
++ (void)getTweetsWithQuery:(NSString *)query completion:(void (^)(NSDictionary *metadata, NSArray <NSDictionary *> *statuses))completionBlock
 {
     STTwitterAPI *twitter = [[FISTwitterAPIClient sharedClient] twitter];
     [twitter verifyCredentialsWithUserSuccessBlock:^(NSString *username, NSString *userID) {
