@@ -1,12 +1,12 @@
 //
-//  FISTwitterAPIClient.m
+//  FISManualTwitterAPIClient.m
 //  FIS-Tweets
 //
 //  Created by Ken M. Haggerty on 2/21/16.
 //  Copyright © 2016 James Campagno. All rights reserved.
 //
 
-#import "FISTwitterAPIClient.h"
+#import "FISManualTwitterAPIClient.h"
 #import "FISPrivateInfo.h"
 #include <CommonCrypto/CommonHMAC.h>
 
@@ -26,12 +26,12 @@ static NSString *const TwitterAPIKey_OAuthNonce = @"oauth_nonce";
 
 static NSString *const TwitterAPIKey_OAuthSignature = @"oauth_signature";
 
-@implementation FISTwitterAPIClient
+@implementation FISManualTwitterAPIClient
 
 + (void)getTweetsWithQuery:(NSArray <NSURLQueryItem *> *)queryItems completion:(void (^)(NSArray <NSDictionary *> *tweets))completionBlock {
     
     NSURLComponents *components = [NSURLComponents componentsWithString:TwitterSearchAPIURL];
-    NSArray *parameters = [queryItems arrayByAddingObjectsFromArray:[FISTwitterAPIClient authenticationParameters]];
+    NSArray *parameters = [queryItems arrayByAddingObjectsFromArray:[FISManualTwitterAPIClient authenticationParameters]];
     
     NSMutableArray *encodedParameters = [NSMutableArray array];
     NSURLQueryItem *parameter;

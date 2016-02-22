@@ -1,5 +1,5 @@
 //
-//  FISTwitterAPIClient.h
+//  FISManualTwitterAPIClient.h
 //  FIS-Tweets
 //
 //  Created by Ken M. Haggerty on 2/21/16.
@@ -10,6 +10,6 @@
 
 extern NSString *const TwitterSearchAPIKey_Content;
 
-@interface FISTwitterAPIClient : NSObject
+@interface FISManualTwitterAPIClient : NSObject
 + (void)getTweetsWithQuery:(NSArray <NSURLQueryItem *> *)queryItems completion:(void (^)(NSArray <NSDictionary *> *tweets))completionBlock;
 @end
