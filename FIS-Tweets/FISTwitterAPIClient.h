@@ -12,4 +12,5 @@ extern NSString *const TwitterAPIKeyText;
 
 @interface FISTwitterAPIClient : NSObject
 + (void)getTweetsWithQuery:(NSString *)query completion:(void (^)(NSDictionary *metadata, NSArray <NSDictionary *> *statuses))completionBlock;
++ (void)getAveragePolarityOfTweetsFromQuery:(NSString *)query withCompletion:(void (^)(NSNumber *polarity))completionBlock;
 @end

@@ -1,16 +1,16 @@
-
-  FISTwitterAPIClientSpec.m
-  FISTweetSentiment
-
-  Created by James Campagno on 9/10/15.
-  Copyright 2015 James Campagno. All rights reserved.
-
+//
+//  FISTwitterAPIClientSpec.m
+//  FISTweetSentiment
+//
+//  Created by James Campagno on 9/10/15.
+//  Copyright 2015 James Campagno. All rights reserved.
+//
 
 #import "Specta.h"
 #import "AppDelegate.h"
 #import "FISTwitterAPIClient.h"
 #import "FISSentiment140API.h"
-#import "FISConstants.h"
+//#import "FISConstants.h"
 #import "OHHTTPStubs.h"
 #define EXP_SHORTHAND
 #import "Expecta.h"
@@ -44,7 +44,7 @@ describe(@"FISTwitterAPIClient", ^{
         loginResponse = @{@"access_token": @"DONALD TRUMP",
                           @"token_type": @"bearer"};
         
-        NSString *jsonString = [NSString stringWithFormat:@"{\"results\": {\"polarity\": \"%@\"}}", kPolarityOfEveryTweet];
+        NSString *jsonString = [NSString stringWithFormat:@"{\"data\": [{\"polarity\": \"%@\"}]}", kPolarityOfEveryTweet];
         
         sentimentStubData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
     });
@@ -58,18 +58,32 @@ describe(@"FISTwitterAPIClient", ^{
                 return [[request.URL absoluteString] containsString:kTwitterRequestURL];
             }
                                                   withStubResponse:^OHHTTPStubsResponse*(NSURLRequest *request) {
-                                                      return [OHHTTPStubsResponse responseWithJSONObject:responseObject
-                                                                                              statusCode:200
-                                                                                                 headers:@{@"Content-type": @"application/json"}];
+//                                                      return [OHHTTPStubsResponse responseWithJSONObject:responseObject
+//                                                                                              statusCode:200
+//                                                                                                 headers:@{@"Content-type": @"application/json"}];
+                                                      NSError *error;
+                                                      NSData *jsonData = [NSJSONSerialization dataWithJSONObject:responseObject
+                                                                                                         options:0
+                                                                                                           error:&error];
+                                                      return [OHHTTPStubsResponse responseWithData:jsonData
+                                                                                        statusCode:200
+                                                                                           headers:@{@"Content-type": @"application/json"}];
                                                   }];
             
             httpTwitterLoginStub = [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
                 return [[request.URL absoluteString] isEqualToString:kTwitterOauthURL];
             }
                                                        withStubResponse:^OHHTTPStubsResponse*(NSURLRequest *request) {
-                                                           return [OHHTTPStubsResponse responseWithJSONObject:loginResponse
-                                                                                                   statusCode:200
-                                                                                                      headers:@{@"Content-type": @"application/json"}];
+//                                                           return [OHHTTPStubsResponse responseWithJSONObject:loginResponse
+//                                                                                                   statusCode:200
+//                                                                                                      headers:@{@"Content-type": @"application/json"}];
+                                                           NSError *error;
+                                                           NSData *jsonData = [NSJSONSerialization dataWithJSONObject:loginResponse
+                                                                                                              options:0
+                                                                                                                error:&error];
+                                                           return [OHHTTPStubsResponse responseWithData:jsonData
+                                                                                             statusCode:200
+                                                                                                headers:@{@"Content-type": @"application/json"}];
                                                        }];
         
             httpSentimentStub = [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {

@@ -1,12 +1,12 @@
 //
-//  FISSentiment140APIClient.m
+//  FISSentiment140API.m
 //  FIS-Tweets
 //
 //  Created by Ken M. Haggerty on 2/22/16.
 //  Copyright © 2016 James Campagno. All rights reserved.
 //
 
-#import "FISSentiment140APIClient.h"
+#import "FISSentiment140API.h"
 #import "FISPrivateInfo.h"
 
 NSString *const Sentiment140APIKeyPolarity = @"polarity";
@@ -16,7 +16,7 @@ static NSString *const Sentiment140APIKeyAppID = @"appid";
 static NSString *const Sentiment140APIKeyText = @"text";
 static NSString *const Sentiment140APIKeyData = @"data";
 
-@implementation FISSentiment140APIClient
+@implementation FISSentiment140API
 
 + (void)getSentimentsForText:(NSArray <NSString *> *)text completion:(void (^)(NSArray <NSDictionary *> *sentiments))completionBlock
 {

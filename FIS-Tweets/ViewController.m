@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "FISTwitterAPIClient.h"
-#import "FISSentiment140APIClient.h"
+#import "FISSentiment140API.h"
 
 @interface ViewController ()
 @property (nonatomic, strong) IBOutlet UILabel *sentiment;
@@ -30,7 +30,7 @@
         {
             [text addObject:statuses[i][TwitterAPIKeyText]];
         }
-        [FISSentiment140APIClient getSentimentsForText:text completion:^(NSArray <NSDictionary *> *sentiments) {
+        [FISSentiment140API getSentimentsForText:text completion:^(NSArray <NSDictionary *> *sentiments) {
             float averageSentiment = 0.0f;
             for (NSUInteger i = 0; i < sentiments.count; i++)
             {
@@ -41,6 +41,12 @@
             });
         }];
     }];
+    
+//    [FISTwitterAPIClient getAveragePolarityOfTweetsFromQuery:@"FlatironSchool" withCompletion:^(NSNumber *polarity) {
+//        dispatch_sync(dispatch_get_main_queue(), ^{
+//            [self.sentiment setText:[NSString stringWithFormat:@"%f", polarity.floatValue]];
+//        });
+//    }];
 }
 
 

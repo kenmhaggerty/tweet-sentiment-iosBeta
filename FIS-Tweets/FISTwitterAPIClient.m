@@ -9,6 +9,7 @@
 #import "FISTwitterAPIClient.h"
 #import "STTwitter.h"
 #import "FISPrivateInfo.h"
+#import "FISSentiment140API.h"
 
 NSString *const TwitterAPIKeyText = @"text";
 
@@ -49,6 +50,26 @@ NSString *const TwitterAPIKeyText = @"text";
         }];
     } errorBlock:^(NSError *error) {
         NSLog(@"%@", error);
+    }];
+}
+
++ (void)getAveragePolarityOfTweetsFromQuery:(NSString *)query withCompletion:(void (^)(NSNumber *polarity))completionBlock
+{
+    [FISTwitterAPIClient getTweetsWithQuery:@"FlatironSchool" completion:^(NSDictionary *metadata, NSArray <NSDictionary *> *statuses) {
+        NSMutableArray *text = [NSMutableArray arrayWithCapacity:statuses.count];
+        for (NSUInteger i = 0; i < statuses.count; i++)
+        {
+            [text addObject:statuses[i][TwitterAPIKeyText]];
+        }
+        [FISSentiment140API getSentimentsForText:text completion:^(NSArray <NSDictionary *> *sentiments) {
+            float averageSentiment = 0.0f;
+            for (NSUInteger i = 0; i < sentiments.count; i++)
+            {
+                averageSentiment += [sentiments[i][Sentiment140APIKeyPolarity] integerValue];
+            }
+            NSNumber *polarity = [NSNumber numberWithFloat:averageSentiment/sentiments.count];
+            completionBlock(polarity);
+        }];
     }];
 }
 
