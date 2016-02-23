@@ -19,11 +19,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    NSURLQueryItem *query = [NSURLQueryItem queryItemWithName:TwitterSearchAPIKey_Content value:@"FlatironSchool"];
-//    [FISTwitterAPIClient getTweetsWithQuery:@[query] completion:^(NSArray <NSDictionary *> *tweets) {
-//        //
-//    }];
-    
     [FISTwitterAPIClient getTweetsWithQuery:@"FlatironSchool" completion:^(NSDictionary *metadata, NSArray <NSDictionary *> *statuses) {
         NSMutableArray *text = [NSMutableArray arrayWithCapacity:statuses.count];
         for (NSUInteger i = 0; i < statuses.count; i++)
@@ -41,12 +36,6 @@
             });
         }];
     }];
-    
-//    [FISTwitterAPIClient getAveragePolarityOfTweetsFromQuery:@"FlatironSchool" withCompletion:^(NSNumber *polarity) {
-//        dispatch_sync(dispatch_get_main_queue(), ^{
-//            [self.sentiment setText:[NSString stringWithFormat:@"%f", polarity.floatValue]];
-//        });
-//    }];
 }
 
 

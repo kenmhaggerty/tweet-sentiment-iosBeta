@@ -18,7 +18,6 @@
 		6CC808CB2A215FB04931D36D /* libPods-FIS-TweetsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CFFC60FC0E91FD59573794BE /* libPods-FIS-TweetsTests.a */; };
 		6D208617F7EEE69711A29EC4 /* libPods-FIS-Tweets.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF36111B9A55F436293560F7 /* libPods-FIS-Tweets.a */; };
 		7D136A271C7A33C700279D15 /* FISPrivateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D136A261C7A33C700279D15 /* FISPrivateInfo.m */; };
-		7D136A2A1C7A371B00279D15 /* FISManualTwitterAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D136A291C7A371B00279D15 /* FISManualTwitterAPIClient.m */; };
 		7D136A2C1C7BAFC600279D15 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D136A2B1C7BAFC600279D15 /* Accounts.framework */; };
 		7D136A2E1C7BAFCA00279D15 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D136A2D1C7BAFCA00279D15 /* Social.framework */; };
 		7D136A301C7BAFD200279D15 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D136A2F1C7BAFD200279D15 /* Twitter.framework */; };
@@ -57,8 +56,6 @@
 		5BC307951BE7ECF00069EF81 /* FISTwitterAPIClientSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISTwitterAPIClientSpec.m; sourceTree = "<group>"; };
 		7D136A251C7A33C700279D15 /* FISPrivateInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISPrivateInfo.h; sourceTree = "<group>"; };
 		7D136A261C7A33C700279D15 /* FISPrivateInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISPrivateInfo.m; sourceTree = "<group>"; };
-		7D136A281C7A371B00279D15 /* FISManualTwitterAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISManualTwitterAPIClient.h; sourceTree = "<group>"; };
-		7D136A291C7A371B00279D15 /* FISManualTwitterAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISManualTwitterAPIClient.m; sourceTree = "<group>"; };
 		7D136A2B1C7BAFC600279D15 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		7D136A2D1C7BAFCA00279D15 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		7D136A2F1C7BAFD200279D15 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
@@ -152,8 +149,6 @@
 				7D136A261C7A33C700279D15 /* FISPrivateInfo.m */,
 				7D136A331C7BB0B100279D15 /* FISTwitterAPIClient.h */,
 				7D136A341C7BB0B100279D15 /* FISTwitterAPIClient.m */,
-				7D136A281C7A371B00279D15 /* FISManualTwitterAPIClient.h */,
-				7D136A291C7A371B00279D15 /* FISManualTwitterAPIClient.m */,
 				7D136A361C7BB83900279D15 /* FISSentiment140API.h */,
 				7D136A371C7BB83900279D15 /* FISSentiment140API.m */,
 				5BC307761BE7C3850069EF81 /* Main.storyboard */,
@@ -389,7 +384,6 @@
 				7D136A351C7BB0B100279D15 /* FISTwitterAPIClient.m in Sources */,
 				5BC307721BE7C3850069EF81 /* AppDelegate.m in Sources */,
 				7D136A381C7BB83900279D15 /* FISSentiment140API.m in Sources */,
-				7D136A2A1C7A371B00279D15 /* FISManualTwitterAPIClient.m in Sources */,
 				5BC3076F1BE7C3850069EF81 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
